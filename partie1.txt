@@ -1,0 +1,302 @@
+html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Untitled-2.css">
+   
+    <script  src="Untitled-3.js" defer ></script></script>
+    <link rel="icon" type="image/x-icon" src="/images/favicon.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>WEATHER</title>
+</head>
+<body>
+    <ul>
+      
+      <li style="float:right"><a class="active" href="#ab" style="margin-left: -48em; padding-left: 1em; padding-right: 2em;" >Guide</a></li>
+      <li style="float:right"><a class="active" href="#ab" style="margin-left: -39em; ">Settings</a></li>
+      <li style="float:right"><a class="active" href="#ab" style="margin-left:-29em;">About</a></li> 
+      <li style="float:initial"><a class="active" href="#about" style="margin-left: 5em;">MY WEATHER</a></li>
+        <img id ="logo" src="weather-app.png" alt="logo" style="margin-top: -3em;">
+    
+       
+          <li> <a href="#"> home</a></li>
+        </li>
+      </ul>  
+     
+        
+ 
+    
+      <div class="contact-map"></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102239.40008030635!2d10.073236888563171!3d36.79499988606579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd337f5e7ef543%3A0xd671924e714a0275!2sTunis!5e0!3m2!1sfr!2stn!4v1650314158810!5m2!1sfr!2stn" width="600" height="900"   style="border: 5em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      
+      
+   
+      <div class="card">
+        <div class="search">
+        <input type="text" class="search-bar" placeholder="Enter city name" id="cityInput">
+         <button type="button" title="search" onclick="myfunction()">
+           <span class="button_icon">
+               <ion-icon name="search-outline"></ion-icon>
+       
+           </span>
+         </button>
+        
+         
+        </div>
+
+        <!--data-->
+        <div class="weather loading">
+          <br>
+          <br>
+          <br>
+        
+
+            <h2 class="city"> Weather in denver <br></h2>
+           
+            <h1 class="temp" > 50°C</h1>
+        
+        
+        
+          <div class="description">
+            Cloudy <br></div>
+        
+        
+          <div class="humidity">
+              Humidity:60%</div>
+        
+        
+          <div class="wind">
+            Wind speed:6.2 km/h</div>
+        
+        <br>
+       
+
+        </div>
+          
+
+            
+</body>
+</html>
+
+css:
+
+
+
+
+ul {
+    list-style-type: none;
+    height:3.5em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:wheat;
+  }
+  
+  li {
+    float: left;
+    color: white;
+    
+  
+  }
+  
+  li a {
+    display: block;
+    color:black;
+    font-weight: 100;
+    font-family:fantasy;
+    margin-top: 0.3em;
+    letter-spacing: 0.2em;
+    text-align: left;
+    font-size:larger;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 7em;
+  }
+  
+  li a:hover:not(.active) {
+    background-color:#6d9ec9;
+    
+  }
+  
+  .active {
+    background-color:wheat;
+  }
+  
+  #logo{
+    width:3em;
+    height:3em;
+    display: inline-block;
+    position:absolute;
+    margin-left: 2em;
+    margin-top: -2.8em;
+  }
+  body {
+    background-color:wheat;
+  
+  }
+  .card{
+    background-color:transparent;
+    padding: 3em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    position:fixed;
+    align-items: center;
+    margin-top: -64em;
+    margin-left: 53em;
+   
+  }
+  .search {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  input.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 24px;
+    font-family:cursive;
+    font-size:large;
+    width: 50%;
+    height: 1em;
+    transition: 0.2s;
+  
+  }
+  div{
+  
+    font-family:monospace;
+    margin: 0.6em;
+    font-size: large;
+    
+    
+  }
+  h2 {
+    background-color: antiquewhite;
+    text-align: center;
+  }
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border:none;
+    height: 2.8em;
+    width: 2.8em;
+    cursor:pointer;
+    transition:0.5em ;
+    
+  }
+  button:hover{
+  background:rgb(177, 207, 228) ;
+  color:blanchedalmond;
+  
+  }
+  .flex {
+  display: flex;
+  align-items:center ;
+  }
+  
+  .description {
+  text-transform: capitalize;
+  margin-left: 8px;
+  background-image: url('weather.png');
+  background-repeat:no-repeat ;
+  background-position:left ;
+  }
+  .weather.loading {
+  visibility: hidden; 
+  max-height: 20px;
+  position: relative;
+  }
+  .weather.loading::after {
+  visibility: visible;
+  
+  position: absolute;
+  }
+  
+  #loop {
+    width:3em;
+    height:1.8em;
+    display: inline-block;
+    position:absolute;
+    margin-left: 60em;
+    margin-top: 1em;
+  
+  }
+  .card::after {
+  background-color: gray;
+  
+  }
+  h3 {
+      text-align: center;
+      color: black;
+  }
+
+
+js:
+
+
+let weather = {
+    apiKey:"a09c9935a17cf01e0ed7dea72b6a67ca",
+      fetchWeather: function (city) {
+      fetch (
+         "https://api.openweathermap.org/data/2.5/weather?q="
+         + city
+         + "&units=metric&appid="
+         +this.apiKey
+      )
+       .then((Response) => Response.json())
+       .then((data) => this.displayWeather(data));
+     },
+     
+     displayWeather:function (data)  {
+      const {name}=data;
+      const { description } =data.weather[0];
+      const { temp,humidity }=data.main;
+      const { speed } =data.wind;
+      document.querySelector(".city").innerText = "Weather in " + name;
+      document.querySelector(".description").innerText= description;
+      document.querySelector(".temp").innerText= temp + "°C";
+      document.querySelector(".humidity").innerText= "Humidity:"+ humidity + "%";
+      document.querySelector(".wind").innerText= "Wind speed:" + speed + "km/h";
+      document.querySelector(".weather").classList.remove("loading");
+      
+    },
+     search: function () {
+       this.fetchWeather(document.querySelector(".search-bar").value);
+     },
+  
+  };
+  
+  document
+  .querySelector(".search button")
+  .addEventListener("click",function() {
+   weather.search();
+  });
+  
+  document.querySelector(".search-bar").addEventListener("keyup",function(event){
+  
+   if (event.key == "Enter"){
+  
+   weather.search();
+  this.style.backgroundImage=URL('im.png')
+  
+  
+    
+     
+   }
+
+  }
+  
+  );

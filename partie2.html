@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script  src="js.js" defer ></script></script>
+    <script src="Untitled-1.html"></script>
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+
+</head>
+<body onload="DefaultScreen()">
+    <ul>
+      
+        <li style="float:right"><a class="active" href="#ab" style="margin-left: -48em; padding-left: 1em; padding-right: 2em;" >Maps</a></li>
+        <li style="float:right"><a class="active" href="#ab" style="margin-left: -39em; ">Settings</a></li>
+        <li style="float:right"><a class="active" href="#ab" style="margin-left:-31em;">About Next Days</a></li> 
+        <li style="float:initial"><a class="active" href="#about" style="margin-left: 5em;">MY WEATHER</a></li>
+          <img id ="logo" src="weather-app.png" alt="logo" style="margin-top: -3em;">
+      
+         
+            <li> <a href="#"> home</a></li>
+          </li>
+        </ul>  
+        <BR>
+        <br>
+        <br>
+       <h2>5DAYS FORECAST</h2>
+    
+        <h1 id="Para1" style="float: right; margin-right: 23em; margin-top: 2em; font-size: 120%; font-family:unset;"></h1>
+        <p id="inputContainer"  placeholder="Enter city name"><input type="text" id="cityInput"></p>
+        <button type="button" onclick="GetInfo()"  title="search">
+            <span class="button_icon">
+                <ion-icon name="search-outline"></ion-icon>
+        
+            </span>
+        </button>        
+        <h2 id="cityName" style="margin-left: 40em; margin-top: 14em; font-family:unset;">---London---</h2>
+ 
+    
+    <div id = "weatherContainer">
+        <div id="iconsContainer">    
+            <div class = "icons">
+                <p class="weather" id="day1"></p>
+                <div class="image"><img src="dotspng.png" class="imgClass" id="img1"></div>
+                <p class="minValues" id="day1Min">Loading...</p>
+                <p class="maxValues" id="day1Max">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day2"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img2"></div>
+                <p class="minValues" id="day2Min">Loading...</p>
+                <p class="maxValues" id="day2Max">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day3"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img3"></div>
+                <p class="minValues" id="day3Min">Loading...</p>
+                <p class="maxValues" id="day3Max">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day4"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img4"></div>
+                <p class="minValues" id="day4Min">Loading...</p>
+                <p class="maxValues" id="day4Max">Loading...</p>
+            </div>
+            <div class = "icons">
+                <p class="weather" id="day5"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img5"></div>
+                <p class="minValues" id="day5Min">Loading...</p>
+                <p class="maxValues" id="day5Max">Loading...</p>
+            </div>
+        </div>
+    </div>
+   
+
+
+</body>
+</html>
